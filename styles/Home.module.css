@@ -54,6 +54,7 @@
   margin-left: 120px;
   margin-right: 50px;
   padding-top: 174px;
+  padding-bottom: 144px;
 }
 .section_1 .section_wrapper {
   display: flex;
@@ -68,7 +69,6 @@
   line-height: 32px;
   color: #232e35;
 }
-
 
 .section_title {
 }
@@ -120,6 +120,15 @@
 }
 
 /* ....section1...End */
+
+/* ....section2... */
+.section_2 {
+  background: #fbfbfb;
+  padding-top: 114px;
+  padding-bottom: 184px;
+}
+/* ....section2... End*/
+
 /* .........Main..........End */
 
 /* .........Footer classes.... */

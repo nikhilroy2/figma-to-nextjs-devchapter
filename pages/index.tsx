@@ -224,6 +224,7 @@ const Main = () => {
   return (
     <main>
       <Section1></Section1>
+      <Section2></Section2>
     </main>
   );
 };
@@ -308,28 +309,11 @@ const Section1 = () => {
     <section className={styles.section_1}>
       <div className={styles.section_wrapper}>
         <div className={styles.content_box}>
-          <div className={styles.section_title}>
-            <div className={styles.subtitle}>
-              <svg
-                style={{ marginRight: "16px" }}
-                width={16}
-                height={2}
-                viewBox="0 0 16 2"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width={16} height={2} fill="#D9D9D9" />
-              </svg>
-              MY NAME IS
-            </div>
-            <h2 className={styles.title_heading}>
-              Alex{" "}
-              <span className="subname" style={{ color: "#7E74F1" }}>
-                {" "}
-                Smith.{" "}
-              </span>
-            </h2>
-          </div>
+          <SectionTitle
+            title="Alex"
+            subtitle="MY NAME IS"
+            subName="Smith."
+          ></SectionTitle>
 
           <p className="">
             Creative front-end developer with more than +5 years of experience
@@ -337,7 +321,10 @@ const Section1 = () => {
             Angular, and React. Passionate about UI/UX
           </p>
 
-          <ul className={styles.social_list} style={{justifyContent: 'flex-start', marginTop: '40px'}}>
+          <ul
+            className={styles.social_list}
+            style={{ justifyContent: "flex-start", marginTop: "40px" }}
+          >
             {social_list.map((v) => {
               return (
                 <li key={v.id}>
@@ -359,5 +346,50 @@ const Section1 = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const Section2 = () => {
+  return (
+    <section className={styles.section_2}>
+      <div className={styles.section_wrapper}>
+        <div className="" style={{display: 'flex', justifyContent: 'center'}}>
+          <SectionTitle
+            title="Specialized in"
+            subtitle="SERVICES"
+            subName=""
+          ></SectionTitle>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const SectionTitle = ({ title = "", subtitle = "", subName = "" }) => {
+  return (
+    <div className={styles.section_title}>
+      <div className={styles.subtitle}>
+        <svg
+          style={{ marginRight: "16px" }}
+          width={16}
+          height={2}
+          viewBox="0 0 16 2"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width={16} height={2} fill="#D9D9D9" />
+        </svg>
+        {subtitle}
+      </div>
+      <h2 className={styles.title_heading}>
+        {title}
+
+        {subName != "" && (
+          <span className="subname" style={{ color: "#7E74F1" }}>
+            &nbsp; {subName}
+          </span>
+        )}
+      </h2>
+    </div>
   );
 };
