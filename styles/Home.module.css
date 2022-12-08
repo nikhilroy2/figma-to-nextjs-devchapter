@@ -46,6 +46,82 @@
 }
 /* .........Header classes.... End*/
 
+/* .........Main.......... */
+
+/* ....section1... */
+.section_1 {
+  width: 1270px;
+  margin-left: 120px;
+  margin-right: 50px;
+  padding-top: 174px;
+}
+.section_1 .section_wrapper {
+  display: flex;
+  align-items: center;
+}
+.section_1 .section_wrapper .content_box {
+  max-width: 538px;
+}
+.section_1 .section_wrapper .content_box p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #232e35;
+}
+
+
+.section_title {
+}
+.section_title .subtitle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 7.5px;
+  color: #656d72;
+}
+.section_title .title_heading {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 55px;
+  /* Cinder */
+  color: #232e35;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.section_1 .img_box {
+  width: 336px;
+  height: 400px;
+  background: #eae6fe;
+  border-radius: 16px;
+  position: relative;
+  margin-left: auto;
+}
+.section_1 .img_box img {
+  position: relative;
+  z-index: 2;
+}
+.section_1 .img_box::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 341px;
+  height: 398px;
+  background: #7e74f1;
+  border-radius: 16px;
+  transform: rotate(-9.55deg);
+}
+
+/* ....section1...End */
+/* .........Main..........End */
+
 /* .........Footer classes.... */
 .footer {
   height: 241px;
@@ -54,7 +130,7 @@
   align-items: center;
   justify-content: center;
 }
-.footer_list {
+.social_list {
   display: flex;
   align-items: center;
   list-style: none;
@@ -63,7 +139,7 @@
   padding: 0;
   margin-bottom: 32px;
 }
-.footer_list a {
+.social_list a {
   display: inline-block;
   margin-right: 32px;
 }
